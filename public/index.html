@@ -43,7 +43,18 @@ and open the template in the editor.
         <script type="text/javascript" src="app.js"></script>
     </head>
     <body ng-controller="SampleCtrl">
-        <input type="text" ng-model="data.text" />
-        <h1>You said: {{ data.text }}</h1>
+        <!-- list of messages - updates automatically -->
+        <ul>
+            <li ng-repeat="message in messages">
+                <input ng-model="message.text" ng-change="messages.$save(message)" />
+                <button ng-click="messages.$remove(message)">Delete Message</button>
+            </li>
+        </ul>
+        
+        <form ng-submit="addMessage()">
+            <input ng-model="newMessageText" />
+            <button type="submit">Add Message</button>
+        </form>
+
     </body>
 </html>
