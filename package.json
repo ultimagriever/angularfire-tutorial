@@ -1,0 +1,26 @@
+{
+  "name": "angularfire-tutorial",
+  "version": "1.0.0",
+  "description": "AngularFire Tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ultimagriever/angularfire-tutorial.git"
+  },
+  "keywords": [
+    "angular",
+    "firebase"
+  ],
+  "author": "Pamela Argentino",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ultimagriever/angularfire-tutorial/issues"
+  },
+  "homepage": "https://github.com/ultimagriever/angularfire-tutorial#readme",
+  "devDependencies": {
+    "express": "^4.14.0"
+  }
+}
