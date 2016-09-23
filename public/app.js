@@ -1,10 +1,12 @@
 var app = angular.module("angularFireApp", ["firebase"]);
 
-app.controller("SampleCtrl", function($scope, $firebaseObject) {
-  var ref = firebase.database().ref().child("data");
+app.controller("SampleCtrl", function($scope, $firebaseAuth) {
+  var auth = $firebaseAuth();
   
-  var syncObject = $firebaseObject(ref);
-  
-  syncObject.$bindTo($scope, "data");
+  auth.$signInWithPopup("google").then(function(firebaseUser) {
+    console.log("Signed in as:", firebaseUser.uid);
+  }).catch(function(error) {
+    console.log("Authentication failed:", error);
+  });
   
 });
